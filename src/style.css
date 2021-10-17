@@ -1,2 +1,30 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .weatherApp {
+  max-width: 600px;
+  margin: 40px auto;
+  border: 1px solid rgb(219, 219, 219);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  text-align: left;
+  font-size: 17 px;
+  font-weight: 100;
+  list-style: none;
 }
