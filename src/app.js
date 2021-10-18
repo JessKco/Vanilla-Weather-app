@@ -26,7 +26,6 @@ function showDate(timestamp) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let temperature = document.querySelector("#tempNow");
   temperature.innerHTML = Math.round(response.data.main.temp);
 
