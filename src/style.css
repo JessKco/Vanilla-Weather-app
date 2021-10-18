@@ -4,7 +4,7 @@ body {
 }
 
 .weatherApp {
-  max-width: 600px;
+  max-width: 500px;
   margin: 40px auto;
   border: 1px solid rgb(219, 219, 219);
   padding: 30px;
@@ -24,7 +24,25 @@ ul {
 }
 li {
   text-align: left;
-  font-size: 17 px;
+  font-size: 13px;
   font-weight: 100;
   list-style: none;
+}
+
+.weather-temperature img {
+  margin-right: 7px;
+}
+
+.weather-temperature strong {
+  font-size: 50px;
+
+  font-weight: 300;
+}
+
+.weather-temperature small {
+  line-height: 1;
+  font-weight: 300;
+  position: relative;
+  font-size: 15px;
+  top: -24px;
 }
