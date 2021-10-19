@@ -1,5 +1,6 @@
+let city = "Gloucester";
 let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 function showDate(timestamp) {
   let date = new Date(timestamp);
@@ -28,7 +29,7 @@ function showDate(timestamp) {
 function showTemperature(response) {
   let temperature = document.querySelector("#tempNow");
   temperature.innerHTML = Math.round(response.data.main.temp);
-
+  
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
 
@@ -46,5 +47,11 @@ function showTemperature(response) {
 
   let dateNow = document.querySelector("#date");
   dateNow.innerHTML = showDate(response.data.dt * 1000);
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 axios.get(apiUrl).then(showTemperature);
