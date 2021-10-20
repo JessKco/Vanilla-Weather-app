@@ -45,6 +45,16 @@ li {
   line-height: 1;
   font-weight: 300;
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   top: -24px;
+}
+
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
