@@ -1,6 +1,4 @@
-let city = "Gloucester";
-let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+search("New York");
 
 function showDate(timestamp) {
   let date = new Date(timestamp);
@@ -29,7 +27,7 @@ function showDate(timestamp) {
 function showTemperature(response) {
   let temperature = document.querySelector("#tempNow");
   temperature.innerHTML = Math.round(response.data.main.temp);
-  
+
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
 
@@ -54,4 +52,20 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-axios.get(apiUrl).then(showTemperature);
+
+function search(city) {
+  let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function citySubmit(event) {
+  event.preventDefault();
+  let searchBar = document.querySelector("#search-bar");
+  search(searchBar.value);
+}
+search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", citySubmit);
