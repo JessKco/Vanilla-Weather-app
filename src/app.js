@@ -1,5 +1,3 @@
-search("New York");
-
 function showDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -94,3 +92,27 @@ function showCelcius(event) {
 
 let celciusTemp = document.querySelector("#celcius");
 celciusTemp.addEventListener("click", showCelcius);
+
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let forcastDays = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+
+  forcastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class="col-2">
+<div class="weatherDate">${day}</div>
+  <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="40px">
+
+  <span class="topTemp">18</span> <span class="bottomTemp">12</span>
+</div> `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
+search("London");
+displayForecast();
