@@ -4,7 +4,7 @@ body {
 }
 
 .weatherApp {
-  max-width: 500px;
+  max-width: 480px;
   margin: 40px auto;
   border: 1px solid rgb(219, 219, 219);
   padding: 30px;
@@ -32,24 +32,26 @@ li {
 
 .weather-temperature img {
   margin-right: 7px;
-  margin-left: -5px;
+  margin-left: -8px;
 }
 
 .weather-temperature strong {
   font-size: 50px;
-
   font-weight: 300;
+
+  margin-left: -8px;
 }
 
 .weather-temperature small {
   line-height: 1;
   font-weight: 300;
   position: relative;
-  font-size: 14px;
+  font-size: 13px;
   top: -24px;
+  margin-left: -3px;
 }
 
-.weather-temperature .active {
+.active {
   color: black;
   cursor: default;
   text-decoration: none;
@@ -57,6 +59,11 @@ li {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.fahrenheit {
+  text-decoration: none;
+  position: relative;
 }
 
 .weatherForecast {
@@ -74,6 +81,25 @@ li {
 }
 
 .bottomTemp {
-  font-size: 12px;
+  font-size: 11px;
   color: grey;
+}
+
+.feels {
+  position: relative;
+  margin-left: 60px;
+  margin-top: 2px;
+}
+
+.btn {
+  background-color: rgb(151, 30, 238);
+  border: 1px solid rgb(151, 30, 238);
+  color: white;
+}
+
+.btn:hover {
+  color: rgb(151, 30, 238);
+  border: 1px solid rgb(151, 30, 238);
+  background-color: white;
+  
 }

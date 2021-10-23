@@ -19,13 +19,13 @@ function showDate(timestamp) {
   ];
   let day = days[date.getDay()];
 
-  return `${day} ${hours}:${minutes}`;
+  return `Last Updated: ${day} ${hours}:${minutes}`;
 }
 
 function getForecast(coordinates) {
   let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
