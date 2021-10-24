@@ -33,14 +33,14 @@ li {
 
 .weather-temperature img {
   margin-right: 7px;
-  margin-left: -10px;
+  margin-left: -15px;
 }
 
 .weather-temperature strong {
   font-size: 50px;
   font-weight: 300;
   position: relative;
-  margin-left: -10px;
+  margin-left: -15px;
   top: 12px;
 }
 
@@ -50,7 +50,7 @@ li {
   position: relative;
   font-size: 13px;
   top: -14px;
-  margin-left: -1px;
+  margin-left: -3px;
   text-decoration: none;
 }
 
