@@ -70,6 +70,8 @@ function search(city) {
 
 function citySubmit(event) {
   event.preventDefault();
+  celciusTemp.classList.add("active");
+  fahrenheit.classList.remove("active");
   let searchBar = document.querySelector("#search-bar");
   search(searchBar.value);
 }
